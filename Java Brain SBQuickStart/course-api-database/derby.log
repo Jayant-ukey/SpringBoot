@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Tue Jul 09 18:19:38 IST 2024:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.16.1.1 - (1901046): instance a816c00e-0190-978a-dbce-000003e13dd8 
+on database directory memory:D:\Practice\SB\course-api-database\29379064-86dd-4114-a127-11d900384920 with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@61e4705b 
+Loaded from file:/C:/Users/jayant.ukey/.m2/repository/org/apache/derby/derby/10.16.1.1/derby-10.16.1.1.jar
+java.vendor=Eclipse Adoptium
+java.runtime.version=21.0.3+9-LTS
+user.dir=D:\Practice\SB\course-api-database
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
