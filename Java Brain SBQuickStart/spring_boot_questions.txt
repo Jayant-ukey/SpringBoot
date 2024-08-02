@@ -1,0 +1,53 @@
+Learnings:
+
+
+1. What is maven? (Maven is the dependency management tool. It also let you start spring starter project)
+2. What is the use of spring-boot-starter-parent
+3. Advantage of Embedeed tomcat server.
+
+4. RequestBody annotation is equally important. Also know about @PathVariable.
+
+5. application.properties - It it the easiest way by which we can tune our spring application. One of the best example is server.port which helps to change the port number to some else.
+
+-> By using AutoWired annotations we can use that particular Class services in our current class.
+
+-> CrudRepository is of generic type means we need to pass parameter. So here it took 2 parameter. First one is the entity class and another one is the type of primary key i.e. ID.
+
+--------------
+
+JPA:
+JPA stands for Java Persistance API.
+
+Spring Boot JPA implements the method of JPA.
+JPA uses the Hibernate API.
+Hibernate uses JDBC API.
+and JDBC talks with the database. That's how the flow goes.
+
+
+
+---------------
+14-07-24
+
+1.Actuator: 
+	- It's a production ready feature to help you monitor and manage your application.
+	-When we have to check health of our application. Means whether application is up or down. Like that kind of thing we can check using endpoint /health.
+	- Another endpint : /beans ->
+	-Initially the port which assign for actuator dependency is same as our local port. But we can change it by changing -> management.port: 9001 like that.
+	
+2. Mapstruct
+	- It is used to convert dto's into entity.
+	- It internally maps each column of dto to entity class.(Like employee.setName(employeeDto.getName()) )
+	- We need to add depnedncy and separate plugin for it. This plugin will create implementation class internally.
+	- Actaully when we create application. There may be some information that we didn't get from the UI. Like if you are registering the user and in you table you are adding one column name as created_at. But this time is not be provided by user. It will be sent from the backend at the time of creattion. 
+	So we don't direclty add details from service layer to DAO. First user send data it sent to DTO and then it goes to DAO.
+	
+3. To see the sql in our console we can use show-SQL as true in application.properties file.
+
+4. ddl-auto in application.properties :
+	a. CREATE : create a new schema everytime when we run the application. By default it is set to CREATE. (creates the schema, destroying previous data.)
+	b. UPDATE : When we run the application it's not going to drop the schema. It strat from where it left.
+	c. create-drop: drop the schema at the end of the session. Generally prefered at the time of testing. So that it get deleted automaticually when our work done.
+	d. validate: validate the schema, makes no changes to the database.
+	
+	
+	
